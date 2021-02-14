@@ -1,0 +1,237 @@
+:root{
+    --grey:#eabf9f;
+    --black:#252a34;
+    --blue:#08d9d6;
+    --white:#eaeaea;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #FFF;
+    overflow-x: hidden;
+    font-family: 'Benne', serif;
+}
+
+/**Menu bar**/
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.menu .logo-box{
+    margin-left: 20px;
+}
+
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-container{
+    margin-right: 20px;
+}
+
+.menu .list-container .lists{
+    display: flex;
+}
+
+.menu .list-container .lists li{
+    list-style: none;
+}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 20px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.menu .list-container .lists li a:hover{
+    background: var(--grey);
+}
+
+.menu .list-container .lists li a.active{
+    background: var(--grey);
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+/**Conttnt**/
+.content{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .contacto{
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.content .contacto li{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    margin: 0 80px;
+    transform: rotate(-30deg) skew(25deg);
+    background: #ccc;
+}
+
+.content .contacto li span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.content .contacto li:hover span:nth-child(5){
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+.content .contacto li:hover span:nth-child(4){
+    transform: translate(30px, -30px);
+    opacity: .8;
+}
+
+.content .contacto li:hover span:nth-child(3){
+    transform: translate(20px, -20px);
+    opacity: .6;
+}
+
+.content .contacto li:hover span:nth-child(2){
+    transform: translate(10px, -10px);
+    opacity: .4;
+}
+
+.content .contacto li:hover span:nth-child(1){
+    transform: translate(0, 0);
+    opacity: .2;
+}
+
+.content .contacto li:nth-child(1) span{
+    background: #3b5999;
+}
+
+.content .contacto li:nth-child(2) span{
+    background: #55acee;
+}
+
+.content .contacto li:nth-child(3) span{
+    background: #dd4b39;
+}
+
+.content .contacto li:nth-child(4) span{
+    background: #0077b5;
+}
+
+.content .contacto li:nth-child(5) span{
+    background: #e4405f;
+}
+
+/**Responsive**/
+@media only screen and (max-width: 600px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .btn-menu > .fa-bars:hover{
+        color: var(--grey);
+    }
+
+    .btn_menu > fa-times{
+        color: var(--grey);
+    }
+
+    .menu .list-container{
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: -100%;
+        height: calc(100vh - 60px);
+        background: #FFF;
+    }
+
+    .menu .list-container .lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--grey);
+    }
+
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0;
+        border-bottom: 1px solid var(--grey);
+        text-align: center;
+    }
+
+    .menu .list-container .lists li a{
+        font-size: 20px;
+    }
+
+    .menu .list-container .lists li a.active{
+        background: none;
+        color: var(--grey);
+    }
+
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--grey);
+    }
+
+}
+
+
+
+
