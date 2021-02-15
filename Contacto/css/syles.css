@@ -86,8 +86,6 @@ body{
 .content{
     position: relative;
     margin: 0;
-    top: 80px;
-    bottom: -80px;
     padding: 0;
     height: 100vh;
 
@@ -110,7 +108,7 @@ body{
     list-style: none;
     width: 80px;
     height: 80px;
-    margin: 50px 80px;
+    margin: 30px 60px;
     transform: rotate(-30deg) skew(25deg);
     background: #ccc;
 }
@@ -129,6 +127,7 @@ body{
     color: #fff;
     font-size: 30px;
 }
+
 
 .content .contacto li:hover span:nth-child(5){
     transform: translate(40px, -40px);
@@ -232,6 +231,17 @@ body{
     .menu .list-container .lists li a:hover{
         background: none;
         color: var(--grey);
+    }
+
+    .content .contacto{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    
     }
 
 }
